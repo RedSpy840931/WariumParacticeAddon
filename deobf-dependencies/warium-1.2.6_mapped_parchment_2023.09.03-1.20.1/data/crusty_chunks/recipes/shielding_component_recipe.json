@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:ingots/steel"
+    },
+    "b": {
+      "tag": "forge:blocks/lead"
+    },
+    "c": {
+      "item": "crusty_chunks:neutron_reflector"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:shielding_component",
+    "count": 1
+  }
+}

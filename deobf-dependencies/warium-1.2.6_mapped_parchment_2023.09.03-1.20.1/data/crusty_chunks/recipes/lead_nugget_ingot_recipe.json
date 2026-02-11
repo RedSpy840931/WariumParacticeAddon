@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    },
+    {
+      "item": "crusty_chunks:lead_nugget"
+    }
+  ],
+  "result": {
+    "item": "crusty_chunks:lead_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "type": "crusty_chunks:assembly",
+
+        "item": "forge:ingots/brass",
+        "process": "crusty_chunks:mechanical_bore",
+        "result": "crusty_chunks:brass_fitting",
+       "runs": 1
+}

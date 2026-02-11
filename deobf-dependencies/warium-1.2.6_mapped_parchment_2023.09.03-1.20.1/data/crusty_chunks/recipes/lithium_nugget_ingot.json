@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    },
+    {
+      "item": "crusty_chunks:lithium_nugget"
+    }
+  ],
+  "result": {
+    "item": "crusty_chunks:lithium_ingot",
+    "count": 1
+  }
+}

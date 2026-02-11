@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:lithium_ingot"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:lithium_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    "bcb",
+    " bc"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:he_projectile"
+    },
+    "b": {
+      "item": "minecraft:paper"
+    },
+    "c": {
+      "item": "crusty_chunks:propellent"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:large_shell",
+    "count": 1
+  }
+}

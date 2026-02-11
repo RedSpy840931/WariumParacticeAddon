@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:asphalt"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:asphalt_slab",
+    "count": 6
+  }
+}

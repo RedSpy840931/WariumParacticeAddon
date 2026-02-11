@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:spyglass"
+    },
+    {
+      "item": "crusty_chunks:bolt_action_rifle_animated"
+    }
+  ],
+  "result": {
+    "item": "crusty_chunks:scoped_bolt_action_rifle_animated",
+    "count": 1
+  }
+}

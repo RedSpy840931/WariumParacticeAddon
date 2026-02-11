@@ -1,0 +1,276 @@
+package net.mcreator.crustychunks.procedures;
+
+import net.mcreator.crustychunks.CrustyChunksMod;
+import net.mcreator.crustychunks.init.CrustyChunksModItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.registries.ForgeRegistries;
+
+public class LMGReloadScriptProcedure {
+   public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+      if (entity != null) {
+         LivingEntity _livEnt;
+         ItemStack var10000;
+         if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            var10000 = _livEnt.getOffhandItem();
+         } else {
+            var10000 = ItemStack.EMPTY;
+         }
+
+         LivingEntity _livEnt;
+         LivingEntity _livEnt;
+         LivingEntity _entity;
+         ItemStack _setstack;
+         Player _player;
+         ItemStack var10001;
+         CompoundTag var18;
+         ItemStack var10002;
+         if (var10000.getCount() == 0) {
+            if (entity instanceof LivingEntity) {
+               _livEnt = (LivingEntity)entity;
+               var10001 = _livEnt.getMainHandItem();
+            } else {
+               var10001 = ItemStack.EMPTY;
+            }
+
+            if (var10001.getOrCreateTag().getBoolean("Loaded")) {
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  _setstack = (new ItemStack((ItemLike)CrustyChunksModItems.LMG_MAGAZINE.get())).copy();
+                  _setstack.setCount(1);
+                  _entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+                  if (_entity instanceof Player) {
+                     _player = (Player)_entity;
+                     _player.getInventory().setChanged();
+                  }
+               }
+
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  var10000 = _entity.getOffhandItem();
+               } else {
+                  var10000 = ItemStack.EMPTY;
+               }
+
+               var18 = var10000.getOrCreateTag();
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  var10002 = _entity.getMainHandItem();
+               } else {
+                  var10002 = ItemStack.EMPTY;
+               }
+
+               var18.putDouble("Ammo", var10002.getOrCreateTag().getDouble("Ammo"));
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  var10000 = _entity.getMainHandItem();
+               } else {
+                  var10000 = ItemStack.EMPTY;
+               }
+
+               var10000.getOrCreateTag().putBoolean("Loaded", false);
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  var10000 = _entity.getOffhandItem();
+               } else {
+                  var10000 = ItemStack.EMPTY;
+               }
+
+               var18 = var10000.getOrCreateTag();
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  var10002 = _entity.getMainHandItem();
+               } else {
+                  var10002 = ItemStack.EMPTY;
+               }
+
+               var18.putString("Type", var10002.getOrCreateTag().getString("Type"));
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  var10000 = _entity.getMainHandItem();
+               } else {
+                  var10000 = ItemStack.EMPTY;
+               }
+
+               var10000.getOrCreateTag().putString("Type", "NULL");
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  var10000 = _entity.getMainHandItem();
+               } else {
+                  var10000 = ItemStack.EMPTY;
+               }
+
+               var10000.getOrCreateTag().putDouble("Ammo", 0.0D);
+               if (world instanceof ServerLevel) {
+                  ServerLevel _level = (ServerLevel)world;
+                  ItemEntity var19 = new ItemEntity;
+                  double var10004 = y + 1.0D;
+                  ItemStack var10006;
+                  if (entity instanceof LivingEntity) {
+                     LivingEntity _livEnt = (LivingEntity)entity;
+                     var10006 = _livEnt.getOffhandItem();
+                  } else {
+                     var10006 = ItemStack.EMPTY;
+                  }
+
+                  var19.<init>(_level, x, var10004, z, var10006);
+                  ItemEntity entityToSpawn = var19;
+                  entityToSpawn.setPickUpDelay(10);
+                  entityToSpawn.setUnlimitedLifetime();
+                  _level.addFreshEntity(entityToSpawn);
+               }
+
+               CrustyChunksMod.queueServerWork(1, () -> {
+                  if (world instanceof Level) {
+                     Level _level = (Level)world;
+                     if (!_level.isClientSide()) {
+                        _level.playSound((Player)null, BlockPos.containing(x, y, z), (SoundEvent)ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("crusty_chunks:riflemagazine")), SoundSource.NEUTRAL, 1.0F, 1.0F);
+                     } else {
+                        _level.playLocalSound(x, y, z, (SoundEvent)ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("crusty_chunks:riflemagazine")), SoundSource.NEUTRAL, 1.0F, 1.0F, false);
+                     }
+                  }
+
+               });
+               if (entity instanceof LivingEntity) {
+                  _entity = (LivingEntity)entity;
+                  _setstack = (new ItemStack((ItemLike)CrustyChunksModItems.LMG_MAGAZINE.get())).copy();
+                  _setstack.setCount(0);
+                  _entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+                  if (_entity instanceof Player) {
+                     _player = (Player)_entity;
+                     _player.getInventory().setChanged();
+                  }
+               }
+            }
+         } else {
+            if (entity instanceof LivingEntity) {
+               _livEnt = (LivingEntity)entity;
+               var10000 = _livEnt.getOffhandItem();
+            } else {
+               var10000 = ItemStack.EMPTY;
+            }
+
+            if (var10000.getItem() == CrustyChunksModItems.LMG_MAGAZINE.get()) {
+               if (entity instanceof LivingEntity) {
+                  _livEnt = (LivingEntity)entity;
+                  var10001 = _livEnt.getMainHandItem();
+               } else {
+                  var10001 = ItemStack.EMPTY;
+               }
+
+               if (!var10001.getOrCreateTag().getBoolean("Loaded")) {
+                  if (entity instanceof LivingEntity) {
+                     _entity = (LivingEntity)entity;
+                     var10000 = _entity.getMainHandItem();
+                  } else {
+                     var10000 = ItemStack.EMPTY;
+                  }
+
+                  var10000.getOrCreateTag().putBoolean("Loaded", true);
+                  if (entity instanceof LivingEntity) {
+                     _entity = (LivingEntity)entity;
+                     var10000 = _entity.getMainHandItem();
+                  } else {
+                     var10000 = ItemStack.EMPTY;
+                  }
+
+                  var10000.getOrCreateTag().putBoolean("action", true);
+                  if (entity instanceof LivingEntity) {
+                     _entity = (LivingEntity)entity;
+                     var10000 = _entity.getMainHandItem();
+                  } else {
+                     var10000 = ItemStack.EMPTY;
+                  }
+
+                  var18 = var10000.getOrCreateTag();
+                  if (entity instanceof LivingEntity) {
+                     _entity = (LivingEntity)entity;
+                     var10002 = _entity.getOffhandItem();
+                  } else {
+                     var10002 = ItemStack.EMPTY;
+                  }
+
+                  var18.putString("Type", var10002.getOrCreateTag().getString("Type"));
+                  if (entity instanceof LivingEntity) {
+                     _entity = (LivingEntity)entity;
+                     var10000 = _entity.getMainHandItem();
+                  } else {
+                     var10000 = ItemStack.EMPTY;
+                  }
+
+                  var18 = var10000.getOrCreateTag();
+                  if (entity instanceof LivingEntity) {
+                     _entity = (LivingEntity)entity;
+                     var10002 = _entity.getOffhandItem();
+                  } else {
+                     var10002 = ItemStack.EMPTY;
+                  }
+
+                  var18.putDouble("Ammo", var10002.getOrCreateTag().getDouble("Ammo"));
+                  if (entity instanceof LivingEntity) {
+                     _entity = (LivingEntity)entity;
+                     _setstack = (new ItemStack((ItemLike)CrustyChunksModItems.LMG_MAGAZINE.get())).copy();
+                     _setstack.setCount(0);
+                     _entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+                     if (_entity instanceof Player) {
+                        _player = (Player)_entity;
+                        _player.getInventory().setChanged();
+                     }
+                  }
+
+                  CrustyChunksMod.queueServerWork(1, () -> {
+                     if (world instanceof Level) {
+                        Level _level = (Level)world;
+                        if (!_level.isClientSide()) {
+                           _level.playSound((Player)null, BlockPos.containing(x, y, z), (SoundEvent)ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("crusty_chunks:riflemagazine")), SoundSource.NEUTRAL, 1.0F, 1.0F);
+                        } else {
+                           _level.playLocalSound(x, y, z, (SoundEvent)ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("crusty_chunks:riflemagazine")), SoundSource.NEUTRAL, 1.0F, 1.0F, false);
+                        }
+                     }
+
+                  });
+               }
+            }
+         }
+
+         if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            var10001 = _livEnt.getMainHandItem();
+         } else {
+            var10001 = ItemStack.EMPTY;
+         }
+
+         if (var10001.getOrCreateTag().getBoolean("Loaded")) {
+            if (entity instanceof LivingEntity) {
+               _livEnt = (LivingEntity)entity;
+               var10000 = _livEnt.getOffhandItem();
+            } else {
+               var10000 = ItemStack.EMPTY;
+            }
+
+            if (var10000.getItem() == CrustyChunksModItems.LMG_MAGAZINE.get() && entity instanceof Player) {
+               Player _player = (Player)entity;
+               if (!_player.level().isClientSide()) {
+                  _player.displayClientMessage(Component.literal("§4Weapon still contains magazine."), true);
+               }
+            }
+         }
+
+      }
+   }
+}

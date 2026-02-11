@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a ",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:trinitite_glass"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:trinitite_glass_stairs",
+    "count": 4
+  }
+}

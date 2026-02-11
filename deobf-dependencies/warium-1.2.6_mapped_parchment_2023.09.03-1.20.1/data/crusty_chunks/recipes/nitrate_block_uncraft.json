@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:nitrate_block"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:nitrate",
+    "count": 9
+  }
+}

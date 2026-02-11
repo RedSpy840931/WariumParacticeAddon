@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:small_cannon_foundry_template"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:medium_cannon_foundry_template",
+    "count": 1
+  }
+}

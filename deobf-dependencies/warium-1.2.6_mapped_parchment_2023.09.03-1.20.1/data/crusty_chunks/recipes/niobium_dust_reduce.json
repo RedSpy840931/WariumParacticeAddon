@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:niobium_dust"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:niobium_tiny_dust",
+    "count": 4
+  }
+}

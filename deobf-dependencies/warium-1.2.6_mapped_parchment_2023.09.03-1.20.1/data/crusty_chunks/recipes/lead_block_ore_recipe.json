@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crusty_chunks:lead_block"
+    }
+  ],
+  "result": {
+    "item": "crusty_chunks:lead_ingot",
+    "count": 9
+  }
+}

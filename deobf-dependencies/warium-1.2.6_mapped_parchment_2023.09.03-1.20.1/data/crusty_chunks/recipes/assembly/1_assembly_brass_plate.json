@@ -1,0 +1,8 @@
+{
+    "type": "crusty_chunks:assembly",
+
+        "item": "forge:ingots/brass",
+        "process": "crusty_chunks:mechanical_press",
+        "result": "crusty_chunks:brass_plate",
+       "runs": 1
+}

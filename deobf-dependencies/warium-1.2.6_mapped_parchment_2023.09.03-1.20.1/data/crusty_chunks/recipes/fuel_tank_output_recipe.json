@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:fuel_tank_input"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:fuel_tank",
+    "count": 1
+  }
+}

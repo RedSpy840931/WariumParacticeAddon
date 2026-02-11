@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "crusty_chunks:volatile_dust"
+    }
+  },
+  "result": {
+    "item": "crusty_chunks:large_volatile_pile",
+    "count": 1
+  }
+}

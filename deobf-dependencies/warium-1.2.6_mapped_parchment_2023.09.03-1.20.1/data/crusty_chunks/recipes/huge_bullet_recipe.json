@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crusty_chunks:large_projectile"
+    },
+    {
+      "item": "crusty_chunks:large_projectile"
+    },
+    {
+      "item": "crusty_chunks:large_projectile"
+    },
+    {
+      "item": "crusty_chunks:propellent"
+    },
+    {
+      "item": "crusty_chunks:huge_casing"
+    },
+    {
+      "item": "crusty_chunks:huge_casing"
+    },
+    {
+      "item": "crusty_chunks:huge_casing"
+    }
+  ],
+  "result": {
+    "item": "crusty_chunks:huge_bullet",
+    "count": 3
+  }
+}

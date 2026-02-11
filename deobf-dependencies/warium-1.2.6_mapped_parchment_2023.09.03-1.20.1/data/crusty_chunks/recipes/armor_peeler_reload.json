@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crusty_chunks:armor_peeler_rocket"
+    },
+    {
+      "item": "crusty_chunks:armor_peeler_unloaded"
+    }
+  ],
+  "result": {
+    "item": "crusty_chunks:armor_peeler_animated",
+    "count": 1
+  }
+}

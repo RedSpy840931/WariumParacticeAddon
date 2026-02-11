@@ -1,0 +1,103 @@
+package net.mcreator.crustychunks.block;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.StateDefinition.Builder;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+public class FlameThrowerBarrelBlock extends Block implements SimpleWaterloggedBlock {
+   public static final DirectionProperty FACING;
+   public static final BooleanProperty WATERLOGGED;
+
+   public FlameThrowerBarrelBlock() {
+      super(Properties.of().sound(SoundType.ANVIL).strength(1.0F, 10.0F).noOcclusion().isRedstoneConductor((bs, br, bp) -> {
+         return false;
+      }));
+      this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(WATERLOGGED, false));
+   }
+
+   public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+      return state.getFluidState().isEmpty();
+   }
+
+   public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+      return 0;
+   }
+
+   public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+      return Shapes.empty();
+   }
+
+   public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+      VoxelShape var10000;
+      switch((Direction)state.getValue(FACING)) {
+      case NORTH:
+         var10000 = Shapes.or(box(6.0D, 6.0D, 1.0D, 10.0D, 10.0D, 7.0D), new VoxelShape[]{box(7.0D, 7.0D, 2.0D, 9.0D, 9.0D, 17.0D), box(7.0D, 4.0D, 3.0D, 9.0D, 6.0D, 16.0D), box(7.0D, 7.0D, 1.0D, 9.0D, 9.0D, 2.0D)});
+         break;
+      case EAST:
+         var10000 = Shapes.or(box(9.0D, 6.0D, 6.0D, 15.0D, 10.0D, 10.0D), new VoxelShape[]{box(-1.0D, 7.0D, 7.0D, 14.0D, 9.0D, 9.0D), box(0.0D, 4.0D, 7.0D, 13.0D, 6.0D, 9.0D), box(14.0D, 7.0D, 7.0D, 15.0D, 9.0D, 9.0D)});
+         break;
+      case WEST:
+         var10000 = Shapes.or(box(1.0D, 6.0D, 6.0D, 7.0D, 10.0D, 10.0D), new VoxelShape[]{box(2.0D, 7.0D, 7.0D, 17.0D, 9.0D, 9.0D), box(3.0D, 4.0D, 7.0D, 16.0D, 6.0D, 9.0D), box(1.0D, 7.0D, 7.0D, 2.0D, 9.0D, 9.0D)});
+         break;
+      default:
+         var10000 = Shapes.or(box(6.0D, 6.0D, 9.0D, 10.0D, 10.0D, 15.0D), new VoxelShape[]{box(7.0D, 7.0D, -1.0D, 9.0D, 9.0D, 14.0D), box(7.0D, 4.0D, 0.0D, 9.0D, 6.0D, 13.0D), box(7.0D, 7.0D, 14.0D, 9.0D, 9.0D, 15.0D)});
+      }
+
+      return var10000;
+   }
+
+   protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
+      super.createBlockStateDefinition(builder);
+      builder.add(new Property[]{FACING, WATERLOGGED});
+   }
+
+   public BlockState getStateForPlacement(BlockPlaceContext context) {
+      boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
+      return (BlockState)((BlockState)super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite())).setValue(WATERLOGGED, flag);
+   }
+
+   public BlockState rotate(BlockState state, Rotation rot) {
+      return (BlockState)state.setValue(FACING, rot.rotate((Direction)state.getValue(FACING)));
+   }
+
+   public BlockState mirror(BlockState state, Mirror mirrorIn) {
+      return state.rotate(mirrorIn.getRotation((Direction)state.getValue(FACING)));
+   }
+
+   public FluidState getFluidState(BlockState state) {
+      return (Boolean)state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+   }
+
+   public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor world, BlockPos currentPos, BlockPos facingPos) {
+      if ((Boolean)state.getValue(WATERLOGGED)) {
+         world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+      }
+
+      return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
+   }
+
+   static {
+      FACING = HorizontalDirectionalBlock.FACING;
+      WATERLOGGED = BlockStateProperties.WATERLOGGED;
+   }
+}

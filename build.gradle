@@ -176,12 +176,12 @@ dependencies {
     // Файл: warium-api-1.0.1.jar
     // Используем compileOnly, как в документации API
     compileOnly fg.deobf("blank:warium-api:1.0.1")
-
+    implementation fg.deobf("blank:warium-api:1.0.1")
     // 2. Warium (Сам мод)
     // Файл: warium-1.2.6.jar (после переименования!)
     // Используем runtimeOnly, чтобы не лазить во внутренности мода
     runtimeOnly fg.deobf("blank:warium:1.2.6")
-
+    implementation fg.deobf("blank:warium:1.2.6")
     // 3. GeckoLib
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
     implementation("com.eliotlash.mclib:mclib:20")
