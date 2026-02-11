@@ -1,8 +1,0 @@
-{
-  "parent": "block/template_orientable_trapdoor_top",
-  "textures": {
-    "texture": "crusty_chunks:block/rustyblock",
-    "particle": "crusty_chunks:block/rustyblock"
-  },
-  "render_type": "solid"
-}

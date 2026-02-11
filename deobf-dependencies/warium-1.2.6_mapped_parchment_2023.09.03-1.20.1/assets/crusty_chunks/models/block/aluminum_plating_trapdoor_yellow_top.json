@@ -1,8 +1,0 @@
-{
-  "parent": "block/template_orientable_trapdoor_top",
-  "textures": {
-    "texture": "crusty_chunks:block/yellow_aluminum_plating",
-    "particle": "crusty_chunks:block/yellow_aluminum_plating"
-  },
-  "render_type": "solid"
-}

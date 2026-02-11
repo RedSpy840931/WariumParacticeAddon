@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "crusty_chunks:block/ancientlightanimated",
-    "particle": "crusty_chunks:block/ancientlightanimated"
-  },
-  "render_type": "solid"
-}

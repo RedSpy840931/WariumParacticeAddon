@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "crusty_chunks:block/lithiumblock",
-    "particle": "crusty_chunks:block/lithiumblock"
-  },
-  "render_type": "solid"
-}
