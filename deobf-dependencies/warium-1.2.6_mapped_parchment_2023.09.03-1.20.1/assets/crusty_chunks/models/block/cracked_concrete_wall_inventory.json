@@ -1,8 +1,0 @@
-{
-  "parent": "block/wall_inventory",
-  "textures": {
-    "wall": "crusty_chunks:block/crackedcementite",
-    "particle": "crusty_chunks:block/crackedcementite"
-  },
-  "render_type": "solid"
-}

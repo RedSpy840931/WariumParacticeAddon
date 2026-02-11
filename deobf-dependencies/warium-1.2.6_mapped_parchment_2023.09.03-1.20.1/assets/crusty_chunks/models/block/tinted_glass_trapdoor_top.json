@@ -1,8 +1,0 @@
-{
-  "parent": "block/template_orientable_trapdoor_top",
-  "textures": {
-    "texture": "minecraft:block/tinted_glass",
-    "particle": "minecraft:block/tinted_glass"
-  },
-  "render_type": "translucent"
-}

@@ -1,9 +1,0 @@
-{
-  "required": true,
-  "package": "net.mcreator.crustychunks.mixins",
-  "compatibilityLevel": "JAVA_17",
-  "refmap": "mixins.crusty_chunks.refmap.json",
-  "mixins": [],
-  "client": [],
-  "minVersion": "0.8"
-}

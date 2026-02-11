@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "crusty_chunks:block/depleteduraniumblock",
-    "particle": "crusty_chunks:block/depleteduraniumblock"
-  },
-  "render_type": "solid"
-}

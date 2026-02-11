@@ -1,9 +1,0 @@
-{
-  "parent": "block/template_glass_pane_side_alt",
-  "textures": {
-    "particle": "crusty_chunks:block/rebar",
-    "edge": "crusty_chunks:block/crossbar",
-    "pane": "crusty_chunks:block/rebar"
-  },
-  "render_type": "cutout_mipped"
-}

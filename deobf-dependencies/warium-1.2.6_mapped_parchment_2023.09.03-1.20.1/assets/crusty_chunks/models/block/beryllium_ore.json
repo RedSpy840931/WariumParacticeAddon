@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "crusty_chunks:block/berylliumore",
-    "particle": "crusty_chunks:block/berylliumore"
-  },
-  "render_type": "solid"
-}

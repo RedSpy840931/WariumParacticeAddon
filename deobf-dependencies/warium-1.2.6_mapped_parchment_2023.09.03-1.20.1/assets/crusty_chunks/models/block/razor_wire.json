@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "crusty_chunks:block/razorwire",
-    "particle": "crusty_chunks:block/razorwire"
-  },
-  "render_type": "cutout"
-}

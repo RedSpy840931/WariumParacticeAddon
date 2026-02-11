@@ -1,9 +1,0 @@
-{
-  "parent": "crusty_chunks:custom/torpedothruster",
-  "textures": {
-    "all": "crusty_chunks:block/solidsteel",
-    "particle": "crusty_chunks:block/solidsteel",
-    "1": "crusty_chunks:block/torpedothrustertexture"
-  },
-  "render_type": "solid"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "crusty_chunks:block/rawnickelblock",
-    "particle": "crusty_chunks:block/rawnickelblock"
-  },
-  "render_type": "solid"
-}
