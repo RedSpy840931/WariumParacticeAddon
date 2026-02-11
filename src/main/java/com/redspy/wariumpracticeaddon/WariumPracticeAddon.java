@@ -52,7 +52,7 @@ public class WariumPracticeAddon
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        // Do something when the server starts
+          // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
 
