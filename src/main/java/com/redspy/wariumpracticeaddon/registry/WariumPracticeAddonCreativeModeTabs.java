@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModCreativeModeTabs  {
+public class WariumPracticeAddonCreativeModeTabs {
     // Создаем "отложенный регистр" (DeferredRegister) для вкладок
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WariumPracticeAddon.MODID);
@@ -18,16 +18,16 @@ public class ModCreativeModeTabs  {
     // Регистрируем саму вкладку
     public static final RegistryObject<CreativeModeTab> WARIUM_ADDON_TAB = CREATIVE_MODE_TABS.register("warium_addon_tab",
             () -> CreativeModeTab.builder()
-                    // Иконка вкладки (пока поставим Ванильный порох, потом заменим на твой предмет)
-                    .icon(() -> new ItemStack(Items.GUNPOWDER))
+                    // Иконка вкладки (наш предмет)
+                    .icon(() -> new ItemStack(WariumPracticeAddonItems.COMPACT_ROCKET_POD.get()))
                     // Название вкладки (ссылка на файл перевода)
                     .title(Component.translatable("creativetab.warium_addon_tab"))
                     // Логика отображения предметов
                     .displayItems((pParameters, pOutput) -> {
-                        // Сюда мы будем добавлять наши предметы:
-                        // pOutput.accept(ModItems.TITANIUM_INGOT.get());
+                        // Добавляем наш Compact Rocket Pod в креативную вкладку
+                        pOutput.accept(WariumPracticeAddonItems.COMPACT_ROCKET_POD.get());
 
-                        // Пока для теста кинем сюда алмаз, чтобы проверить, что вкладка работает
+                        // Для теста оставим алмаз
                         pOutput.accept(Items.DIAMOND);
                     })
                     .build());

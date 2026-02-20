@@ -1,7 +1,10 @@
 package com.redspy.wariumpracticeaddon;
 
+import com.redspy.wariumpracticeaddon.registry.WariumPracticeAddonBlocks;
+import com.redspy.wariumpracticeaddon.registry.WariumPracticeAddonItems;
+import com.redspy.wariumpracticeaddon.registry.WariumPracticeAddonCreativeModeTabs;
+
 import com.mojang.logging.LogUtils;
-import com.redspy.wariumpracticeaddon.registry.ModCreativeModeTabs;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WariumPracticeAddon.MODID)
@@ -27,9 +31,11 @@ public class WariumPracticeAddon
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        // --- ДОБАВЬ ЭТУ СТРОЧКУ ---
-        ModCreativeModeTabs.register(modEventBus);
-        // --------------------------
+
+        WariumPracticeAddonCreativeModeTabs.register(modEventBus);
+        WariumPracticeAddonItems.register(modEventBus);
+        WariumPracticeAddonBlocks.BLOCKS.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -64,6 +70,7 @@ public class WariumPracticeAddon
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
+            GeckoLib.initialize();
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }

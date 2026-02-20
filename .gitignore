@@ -23,4 +23,7 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+
+/deobf-dependencies/geckolib-forge-1.20.1-4.8.2_mapped_parchment_2023.09.03-1.20.1.jar_Decompiler.com/
+/deobf-dependencies/warium-1.2.6_mapped_parchment_2023.09.03-1.20.1.jar_Decompiler.com/
 /deobf-dependencies/

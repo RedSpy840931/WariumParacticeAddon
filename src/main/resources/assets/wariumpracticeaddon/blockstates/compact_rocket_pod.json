@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "wariumpracticeaddon:block/compact_rocket_pod" },
+    "facing=south": { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 180 },
+    "facing=east": { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 90 },
+    "facing=west": { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 270 }
+  }
+}
