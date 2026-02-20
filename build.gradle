@@ -172,12 +172,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    // 1. Warium API
-    // Файл: warium-api-1.0.1.jar
-    // Используем compileOnly, как в документации API
-    compileOnly fg.deobf("blank:warium-api:1.0.1")
-    implementation fg.deobf("blank:warium-api:1.0.1")
-    // 2. Warium (Сам мод)
+    // Warium (Сам мод)
     // Файл: warium-1.2.6.jar (после переименования!)
     // Используем runtimeOnly, чтобы не лазить во внутренности мода
     runtimeOnly fg.deobf("blank:warium:1.2.6")
