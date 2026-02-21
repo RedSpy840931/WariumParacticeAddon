@@ -1,13 +1,25 @@
 {
   "variants": {
-    "facing=north,half=bottom": { "model": "wariumpracticeaddon:block/compact_rocket_pod" },
-    "facing=east,half=bottom":  { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 90 },
-    "facing=south,half=bottom": { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 180 },
-    "facing=west,half=bottom":  { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 270 },
+    "facing=north,orientation=down": { "model": "wariumpracticeaddon:block/compact_rocket_pod" },
+    "facing=east,orientation=down":  { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 90 },
+    "facing=south,orientation=down": { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 180 },
+    "facing=west,orientation=down":  { "model": "wariumpracticeaddon:block/compact_rocket_pod", "y": 270 },
 
-    "facing=north,half=top": { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 180 },
-    "facing=east,half=top":  { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 270 },
-    "facing=south,half=top": { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 0 },
-    "facing=west,half=top":  { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 90 }
+    "facing=north,orientation=up":   { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 180 },
+    "facing=east,orientation=up":    { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 270 },
+    "facing=south,orientation=up":   { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 0 },
+    "facing=west,orientation=up":    { "model": "wariumpracticeaddon:block/compact_rocket_pod", "x": 180, "y": 90 },
+
+    "facing=north,orientation=vertical_left":  { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_left", "y": 0},
+    "facing=north,orientation=vertical_right": { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_right", "y": 0 },
+
+    "facing=east,orientation=vertical_left":   { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_left", "y": -90 },
+    "facing=east,orientation=vertical_right":  { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_right", "y": -90 },
+
+    "facing=south,orientation=vertical_left":  { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_left", "y": -0 },
+    "facing=south,orientation=vertical_right": { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_right", "y": -0 },
+
+    "facing=west,orientation=vertical_left":   { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_left", "y": 270 },
+    "facing=west,orientation=vertical_right":  { "model": "wariumpracticeaddon:block/compact_rocket_pod_vertical_right", "y": 270 }
   }
 }
