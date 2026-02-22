@@ -1,15 +1,13 @@
 package com.redspy.wariumpracticeaddon.block;
 
+import com.redspy.wariumpracticeaddon.block.entity.CompactRocketPodBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -23,7 +21,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 
-public class CompactRocketPodBlock extends Block {
+public class CompactRocketPodBlock extends Block implements EntityBlock {
 
     // Направление блока
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -128,6 +126,13 @@ public class CompactRocketPodBlock extends Block {
         return RenderShape.MODEL;
     }
 
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+        // Создаем мозги при установке блока
+        return new CompactRocketPodBlockEntity(pPos, pState);
+    }
+
     // Варианты положения блока
     public enum PodOrientation implements StringRepresentable {
         DOWN("down"),
@@ -142,4 +147,5 @@ public class CompactRocketPodBlock extends Block {
         @Override
         public String getSerializedName() { return this.name; }
     }
+
 }

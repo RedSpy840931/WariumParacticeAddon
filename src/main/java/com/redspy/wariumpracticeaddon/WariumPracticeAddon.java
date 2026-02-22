@@ -3,6 +3,7 @@ package com.redspy.wariumpracticeaddon;
 import com.redspy.wariumpracticeaddon.registry.WariumPracticeAddonBlocks;
 import com.redspy.wariumpracticeaddon.registry.WariumPracticeAddonItems;
 import com.redspy.wariumpracticeaddon.registry.WariumPracticeAddonCreativeModeTabs;
+import com.redspy.wariumpracticeaddon.registry.WariumPracticeAddonBlockEntities;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -22,9 +23,9 @@ import software.bernie.geckolib.GeckoLib;
 @Mod(WariumPracticeAddon.MODID)
 public class WariumPracticeAddon
 {
-    // Define mod id in a common place for everything to reference
+
     public static final String MODID = "wariumpracticeaddon";
-    // Directly reference a slf4j logger
+
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public WariumPracticeAddon(FMLJavaModLoadingContext context)
@@ -34,7 +35,8 @@ public class WariumPracticeAddon
 
         WariumPracticeAddonCreativeModeTabs.register(modEventBus);
         WariumPracticeAddonItems.register(modEventBus);
-        WariumPracticeAddonBlocks.BLOCKS.register(modEventBus);
+        WariumPracticeAddonBlocks.register(modEventBus);
+        WariumPracticeAddonBlockEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
