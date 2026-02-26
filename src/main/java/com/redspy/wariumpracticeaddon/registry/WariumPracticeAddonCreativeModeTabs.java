@@ -5,7 +5,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -19,11 +18,11 @@ public final class WariumPracticeAddonCreativeModeTabs {
         CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WariumPracticeAddon.MODID);
 
         WARIUM_ADDON_TAB = CREATIVE_MODE_TABS.register("warium_addon_tab", () -> CreativeModeTab.builder()
-                .icon(() -> new ItemStack(WariumPracticeAddonItems.COMPACT_ROCKET_POD.get()))
+                .icon(() -> new ItemStack(WariumPracticeAddonItems.CONTACT_V_MOUNT_STRAIGHT.get()))
                 .title(Component.translatable("creativetab.warium_addon_tab"))
                 .displayItems((pParameters, pOutput) -> {
                     pOutput.accept(WariumPracticeAddonItems.COMPACT_ROCKET_POD.get());
-                    pOutput.accept(Items.DIAMOND); // Тестовый предмет
+                    pOutput.accept(WariumPracticeAddonItems.CONTACT_V_MOUNT_STRAIGHT.get());
                 })
                 .build());
     }

@@ -1,5 +1,7 @@
 {
   "creativetab.warium_addon_tab": "Warium Practice",
   "block.wariumpracticeaddon.compact_rocket_pod": "Compact Rocket Pod",
-  "item.wariumpracticeaddon.compact_rocket_pod": "Compact Rocket Pod"
+  "item.wariumpracticeaddon.compact_rocket_pod": "Compact Rocket Pod",
+  "block.wariumpracticeaddon.contact_v_mount_straight": "Contact-V Mount",
+  "item.wariumpracticeaddon.contact_v_mount_straight": "Contact-V Mount"
 }

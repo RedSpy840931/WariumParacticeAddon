@@ -1,0 +1,54 @@
+{
+  "variants": {
+    "color=green,facing=north,tiles=0": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0" },
+    "color=green,facing=east,tiles=0":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0", "y": 90 },
+    "color=green,facing=south,tiles=0": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0", "y": 180 },
+    "color=green,facing=west,tiles=0":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0", "y": 270 },
+
+    "color=green,facing=north,tiles=1": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1" },
+    "color=green,facing=east,tiles=1":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1", "y": 90 },
+    "color=green,facing=south,tiles=1": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1", "y": 180 },
+    "color=green,facing=west,tiles=1":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1", "y": 270 },
+
+    "color=green,facing=north,tiles=2": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2" },
+    "color=green,facing=east,tiles=2":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2", "y": 90 },
+    "color=green,facing=south,tiles=2": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2", "y": 180 },
+    "color=green,facing=west,tiles=2":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2", "y": 270 },
+
+    "color=green,facing=north,tiles=3": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3" },
+    "color=green,facing=east,tiles=3":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3", "y": 90 },
+    "color=green,facing=south,tiles=3": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3", "y": 180 },
+    "color=green,facing=west,tiles=3":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3", "y": 270 },
+
+    "color=green,facing=north,tiles=4": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4" },
+    "color=green,facing=east,tiles=4":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4", "y": 90 },
+    "color=green,facing=south,tiles=4": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4", "y": 180 },
+    "color=green,facing=west,tiles=4":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4", "y": 270 },
+
+
+    "color=yellow,facing=north,tiles=0": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0_yellow" },
+    "color=yellow,facing=east,tiles=0":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0_yellow", "y": 90 },
+    "color=yellow,facing=south,tiles=0": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0_yellow", "y": 180 },
+    "color=yellow,facing=west,tiles=0":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_0_yellow", "y": 270 },
+
+    "color=yellow,facing=north,tiles=1": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1_yellow" },
+    "color=yellow,facing=east,tiles=1":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1_yellow", "y": 90 },
+    "color=yellow,facing=south,tiles=1": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1_yellow", "y": 180 },
+    "color=yellow,facing=west,tiles=1":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_1_yellow", "y": 270 },
+
+    "color=yellow,facing=north,tiles=2": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2_yellow" },
+    "color=yellow,facing=east,tiles=2":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2_yellow", "y": 90 },
+    "color=yellow,facing=south,tiles=2": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2_yellow", "y": 180 },
+    "color=yellow,facing=west,tiles=2":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_2_yellow", "y": 270 },
+
+    "color=yellow,facing=north,tiles=3": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3_yellow" },
+    "color=yellow,facing=east,tiles=3":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3_yellow", "y": 90 },
+    "color=yellow,facing=south,tiles=3": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3_yellow", "y": 180 },
+    "color=yellow,facing=west,tiles=3":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_3_yellow", "y": 270 },
+
+    "color=yellow,facing=north,tiles=4": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4_yellow" },
+    "color=yellow,facing=east,tiles=4":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4_yellow", "y": 90 },
+    "color=yellow,facing=south,tiles=4": { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4_yellow", "y": 180 },
+    "color=yellow,facing=west,tiles=4":  { "model": "wariumpracticeaddon:block/contactv/straight/contactv_era_4_yellow", "y": 270 }
+  }
+}

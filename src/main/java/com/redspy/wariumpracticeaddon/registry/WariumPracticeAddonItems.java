@@ -13,11 +13,12 @@ public final class WariumPracticeAddonItems {
 
     public static final DeferredRegister<Item> ITEMS;
     public static final RegistryObject<Item> COMPACT_ROCKET_POD;
-
+    public static final RegistryObject<Item> CONTACT_V_MOUNT_STRAIGHT;
     static {
         ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, WariumPracticeAddon.MODID);
 
         COMPACT_ROCKET_POD = block(WariumPracticeAddonBlocks.COMPACT_ROCKET_POD);
+        CONTACT_V_MOUNT_STRAIGHT = block(WariumPracticeAddonBlocks.CONTACT_V_MOUNT_STRAIGHT);
     }
 
     // Создание предмета на основе существующего блока

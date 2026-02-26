@@ -1,0 +1,7 @@
+{
+	"parent": "wariumpracticeaddon:block/contactv/straight/contactv_era_4",
+	"textures": {
+		"1": "crusty_chunks:block/armor_yellow",
+		"particle": "crusty_chunks:block/armor_yellow"
+	}
+}

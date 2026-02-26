@@ -1,5 +1,5 @@
 {
-  "parent": "wariumpracticeaddon:block/compact_rocket_pod",
+  "parent": "wariumpracticeaddon:block/contactv/straight/contactv_era_0",
   "display": {
     "gui": {
       "rotation": [30, 225, 0],
